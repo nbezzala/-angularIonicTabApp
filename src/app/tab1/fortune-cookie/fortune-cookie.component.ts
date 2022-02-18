@@ -14,8 +14,8 @@ export class FortuneCookieComponent implements OnInit {
   async showFortune() {
     const loading = await this.loadingController.create({
       duration: 3000,
-      message: 'please wait',
-      spinner: 'dots',
+      message: 'Fetching your fortune...',
+      spinner: 'lines',
     });
     await loading.present();
 
