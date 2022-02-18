@@ -1,6 +1,57 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+:root {
+	--ion-background-color: #ffcaff
+;
+	--ion-background-color-rgb: 255,202,255
+;
+
+	--ion-text-color: #3737ff
+;
+	--ion-text-color-rgb: 55,55,255
+;
+
+	--ion-color-step-50: #f5c3ff
+;
+	--ion-color-step-100: #ebbbff
+;
+	--ion-color-step-150: #e1b4ff
+;
+	--ion-color-step-200: #d7adff
+;
+	--ion-color-step-250: #cda5ff
+;
+	--ion-color-step-300: #c39eff
+;
+	--ion-color-step-350: #b997ff
+;
+	--ion-color-step-400: #af8fff
+;
+	--ion-color-step-450: #a588ff
+;
+	--ion-color-step-500: #9b81ff
+;
+	--ion-color-step-550: #9179ff
+;
+	--ion-color-step-600: #8772ff
+;
+	--ion-color-step-650: #7d6aff
+;
+	--ion-color-step-700: #7363ff
+;
+	--ion-color-step-750: #695cff
+;
+	--ion-color-step-800: #5f54ff
+;
+	--ion-color-step-850: #554dff
+;
+	--ion-color-step-900: #4b46ff
+;
+	--ion-color-step-950: #413eff
+;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
