@@ -1,10 +1,13 @@
-<ion-item>
-  <ion-button
+<ion-button
     color="secondary"
     shape="round"
     expand="full"
     (click)="showFortune()"
   >
     Fortune Cookie
-  </ion-button>
-</ion-item>
+</ion-button>
+<br />
+<ion-card *ngIf="fortune" id="FortuneCard">
+    {{ fortune }}
+</ion-card>
+
