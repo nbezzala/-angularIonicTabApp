@@ -3,8 +3,8 @@ import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-fortune-cookie',
-  templateUrl: './fortune-cookie.component.html',
   styleUrls: ['./fortune-cookie.component.css'],
+  templateUrl: './fortune-cookie.component.html',
 })
 export class FortuneCookieComponent implements OnInit {
   constructor(public loadingController: LoadingController) {}
@@ -19,7 +19,7 @@ export class FortuneCookieComponent implements OnInit {
     });
     await loading.present();
 
-    const {role, data} = await loading.onDidDismiss();
+    const { role, data } = await loading.onDidDismiss();
     alert('Your fortune is sweet ' + role + ' ' + data);
   }
 }
