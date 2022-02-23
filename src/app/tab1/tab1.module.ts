@@ -14,8 +14,8 @@ import { FortuneCookieComponent } from './fortune-cookie/fortune-cookie.componen
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
   ],
-  declarations: [Tab1Page, FortuneCookieComponent]
+  declarations: [Tab1Page, FortuneCookieComponent],
 })
 export class Tab1PageModule {}

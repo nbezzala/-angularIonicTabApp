@@ -1,19 +1,15 @@
-
 <div class="ion-text-center">
   <ion-button
-  color="secondary"
-  shape="round"
-  (click)="showFortune()"
-  size="small"
-  class="text-center"
->
-  Fortune Cookie
-</ion-button>
+    color="secondary"
+    shape="round"
+    (click)="showFortune()"
+    size="small"
+    class="text-center"
+  >
+    Fortune Cookie
+  </ion-button>
 </div>
 
-<br/>
-<ion-ripple-effect>Fortune Cookie</ion-ripple-effect>
-<br />
 <ion-card *ngIf="fortune" id="FortuneCard">
   <ion-card-content>
     {{ fortune }}

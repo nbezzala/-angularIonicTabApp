@@ -11,8 +11,9 @@ export class FortuneCookieComponent implements OnInit {
 
   ngOnInit() {}
 
+  
   fortune: String;
-
+  
   async showFortune() {
     this.fortune = '';
     const loading = await this.loadingController.create({
@@ -25,4 +26,5 @@ export class FortuneCookieComponent implements OnInit {
     const { role, data } = await loading.onDidDismiss();
     this.fortune = 'Your fortune is sweeter than you think!';
   }
+  
 }
