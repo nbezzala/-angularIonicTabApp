@@ -7,6 +7,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { FortuneCookieComponent } from './fortune-cookie/fortune-cookie.component';
+import { FortuneCookieService } from './fortune-cookie/fortune-cookie.service';
 
 @NgModule({
   imports: [
@@ -17,5 +18,6 @@ import { FortuneCookieComponent } from './fortune-cookie/fortune-cookie.componen
     Tab1PageRoutingModule,
   ],
   declarations: [Tab1Page, FortuneCookieComponent],
+  providers: [FortuneCookieService]
 })
 export class Tab1PageModule {}
