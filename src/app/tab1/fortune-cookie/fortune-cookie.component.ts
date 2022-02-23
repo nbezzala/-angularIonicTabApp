@@ -8,26 +8,32 @@ import { FortuneCookieService } from './fortune-cookie.service';
   templateUrl: './fortune-cookie.component.html',
 })
 export class FortuneCookieComponent implements OnInit {
-  constructor(public loadingController: LoadingController,
-    private fortuneCookieService: FortuneCookieService) {}
+  constructor(
+    public loadingController: LoadingController,
+    private fortuneCookieService: FortuneCookieService
+  ) {}
 
   ngOnInit() {}
 
-  
   fortune: String;
-  
+
   async showFortune() {
     this.fortune = '';
-
     const loading = await this.loadingController.create({
-      duration: 3000,
       message: 'Fetching your fortune...',
       spinner: 'lines',
     });
-    await loading.present();
 
-    const { role, data } = await loading.onDidDismiss();
-    this.fortune = 'Your fortune is sweeter than you think!';
+    let fortune = this.fortuneCookieService.getFortune().subscribe({
+      next: fortune => { 
+        this.fortune = fortune.text;
+    }, error: e => {
+      console.error(e)
+    },
+    complete: () => loading.dismiss()
+  })
+
+    
+    
   }
-  
 }
