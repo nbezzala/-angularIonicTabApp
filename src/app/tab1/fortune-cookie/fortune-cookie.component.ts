@@ -23,6 +23,7 @@ export class FortuneCookieComponent implements OnInit {
       message: 'Fetching your fortune...',
       spinner: 'lines',
     });
+    await loading.present();
 
     let fortune = this.fortuneCookieService.getFortune().subscribe({
       next: fortune => { 
