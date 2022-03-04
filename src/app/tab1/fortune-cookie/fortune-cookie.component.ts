@@ -32,8 +32,6 @@ export class FortuneCookieComponent implements OnInit {
     },
     complete: () => loading.dismiss()
   })
-
-    
     
   }
 }

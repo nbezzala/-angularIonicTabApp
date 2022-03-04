@@ -8,8 +8,11 @@ export class FortuneCookieService {
 
   getFortune(): Observable<FortuneCookie> {
     let fortune = {
-      id: 1,
+      _id: 'xyz1',
       text: 'You have a wonderful fortune!',
+      __v: 5,
+      created_date: '',
+      modified_date: ''
     };
 
     return of(fortune);
