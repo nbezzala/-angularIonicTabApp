@@ -1,20 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { FortuneCookie } from './fortune-cookie';
 
 @Injectable()
 export class FortuneCookieService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getFortune(): Observable<FortuneCookie> {
-    let fortune = {
-      _id: 'xyz1',
-      text: 'You have a wonderful fortune!',
-      __v: 5,
-      created_date: '',
-      modified_date: ''
-    };
+  private fortuneUrl = 'https://ajnabee.azurewebsites.net/fortune';
 
-    return of(fortune);
+  getFortune(): Observable<FortuneCookie[]> {
+    return this.http.get<FortuneCookie[]>(this.fortuneUrl);
   }
 }

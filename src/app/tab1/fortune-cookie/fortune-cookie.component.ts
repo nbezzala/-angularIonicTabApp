@@ -26,7 +26,7 @@ export class FortuneCookieComponent implements OnInit {
 
     let fortune = this.fortuneCookieService.getFortune().subscribe({
       next: fortune => { 
-        this.fortune = fortune.text;
+        this.fortune = fortune[0].text;
     }, error: e => {
       console.error(e)
     },
