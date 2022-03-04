@@ -6,11 +6,17 @@
     size="small"
     class="text-center"
   >
-    Fortune Cookie
+    Show me my Fortune
   </ion-button>
 </div>
 
 <ion-card *ngIf="fortune" id="FortuneCard">
+  <ion-item>
+    <h4> Fortune Cookie!</h4>
+    <ion-button (click)="hideFortune()" slot="end">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-item>
   <ion-card-content>
     {{ fortune }}
   </ion-card-content>

@@ -17,6 +17,10 @@ export class FortuneCookieComponent implements OnInit {
 
   fortune: String;
 
+  hideFortune() {
+    this.fortune = '';
+  }
+
   async showFortune() {
     this.fortune = '';
     const loading = await this.loadingController.create({
